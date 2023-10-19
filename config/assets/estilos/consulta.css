@@ -1,0 +1,282 @@
+body {
+  background-color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e0e0e0;
+  display: grid;
+  align-items: center;
+  font-size: 1.2rem;
+  overflow-x: auto;
+  height: 100vh;
+}
+header {
+  display: flex;
+}
+#botaosair:hover {
+  color: red;
+}
+.sair {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 900;
+}
+.logo {
+  font-weight: bold;
+  text-decoration: none;
+  height: 3rem;
+  width: 10rem;
+  animation: fade-in 3s forwards;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+.navbar-logo:hover {
+  box-shadow: 0 0 10px rgba(0, 92, 169, 0.7);
+  transform: scale(1.05);
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.navbar {
+  background-color: #005ca9;
+  background-position: top;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 4);
+  display: flex;
+  padding-bottom: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  /* Adicione um valor alto para definir a ordem de empilhamento da navbar */
+}
+
+.navbar-container {
+  /*align-items: flex-start;*/
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  /* Movemos essas tags para o .navbar-container
+  display: flex;
+  align-items: center;
+  */
+  font-weight: bold;
+  text-decoration: none;
+  /* object-fit: cover;
+  /*width: 10rem;*/
+  height: 3rem;
+  width: 10rem;
+  /*border-radius: 200px;
+  margin-right: 200px;*/
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.navbar-menu li {
+  text-align: center;
+  margin-right: 4rem;
+}
+
+.navbar-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar-menu li:last-child {
+  margin-right: 30px;
+  /* Removendo margin do último elemento */
+}
+
+.navbar-menu li a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+#app {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+form {
+  display: grid;
+  border-radius: 15px;
+}
+
+table {
+  border-radius: 20px 20px 0px 0px;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px auto;
+  white-space: nowrap;
+  font-weight: 600;
+  align-items: center;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  -o-table-baseline: inherit;
+  table-layout: unset;
+  display: table-row-group;
+}
+
+tr {
+  display: table-row;
+  vertical-align: super;
+  background-color: #f2f2f2;
+}
+
+tr:last-of-type td:first-child {
+  border-radius: 0px 0px 0px 20px;
+}
+
+tr:last-of-type td:last-child {
+  border-radius: 0px 0px 20px 0px;
+}
+
+h1 {
+  color: #005ca7;
+  font-size: 24px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000000;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #005ca7;
+  color: #fff;
+}
+
+th:first-child {
+  border-radius: 20px 0px 0px 0px;
+}
+
+th:last-child {
+  border-radius: 0px 20px 0px 0px;
+}
+
+@media screen and (max-width: 480px) {
+  .responsive-table th,
+  .responsive-table td {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    position: fixed;
+  }
+
+  #app {
+    position: relative;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+    align-content: space-around;
+    justify-content: space-around;
+  }
+
+  form {
+    display: grid;
+    text-align: center;
+    align-content: space-around;
+  }
+
+  .table-container {
+    display: grid;
+  }
+
+  h1 {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  table {
+    margin: 0;
+
+    display: table-column;
+    margin: 1rem;
+    border-radius: 20px 20px 0px 0px;
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  th {
+    background-color: #005ca7;
+    color: #fff;
+  }
+
+  th:first-child {
+    border-radius: 20px 0px 0px 0px;
+  }
+
+  th:last-child {
+    border-radius: 0px 20px 0px 0px;
+  }
+}
+thead {
+  display: table-header-group;
+  vertical-align: baseline;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+}
+.responsive-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.responsive-table th,
+.responsive-table td {
+  white-space: nowrap;
+}
+
+.rodape {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+}
